@@ -1,0 +1,32 @@
+
+
+/* ==================================== */
+/* ============HARD SKILLS============= */
+/* ==================================== */
+
+.skills {
+    background: var(--background-color);
+    color: black;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.skill-info {
+    h4 {
+        font-size: 3rem;
+        font-weight: 800;
+        line-height: 2;
+    }
+    
+    p {
+        font-size: 1.6rem;
+        font-weight: 600;
+        line-height: 1.7;
+        margin: auto
+    }
+}

@@ -1,0 +1,50 @@
+
+/* ==================================== */
+/* ============SOFT SKILLS============= */
+/* ==================================== */
+
+.soft-skills {
+    background-color: var(--background-color-secondary);
+}
+
+.soft-skills-box {
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .icon-box {
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 16px;
+        border-radius: 50%;
+        width: fit-content;
+        border: 3px solid var(--primary);
+        box-shadow: 0 0 15px var(--primary);
+        i {
+            font-size: 5rem;
+        }
+    }
+
+    .soft-skill-item {
+        max-width: 450px;
+
+        h2 {
+            margin-top: 1.2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        p {text-align: center;}
+    }
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 3rem;
+}
