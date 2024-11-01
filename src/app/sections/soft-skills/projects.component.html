@@ -1,0 +1,26 @@
+
+<section class="skills" id="projects">
+  <h2 class="heading" data-aos="fade-right">Projets</h2>
+  <p class="heading-sub" data-aos="fade-left">
+    Chaque projet représente une opportunité d’innovation et de collaboration, dans laquelle j’ai apporté mes compétences pour relever des défis variés. J'espère que ces exemples vous donneront un aperçu concret de ce que je peux accomplir et de l'impact que je peux apporter à vos futurs projets.
+  </p>
+  
+  <div class="grid-projects">
+    @for (project of allProjects|async; track project) {
+      <div class="project-container">
+        <div class="project-img" [style.background-image]="'url(../../../..//public/projects/'+ project.img+ '.jpg)'"></div>
+        <div class="project-informations">
+          <div class="project-text">
+            <h3 class="project-title">{{project.title}}</h3>
+            <div class="project-supports-container">
+              @for (support of project.supports; track support) {
+                <span class="support-item">{{support}}</span>
+              }
+            </div>
+          </div>
+          <a [href]="project.link" target="_blank" class="btn-primary-outlined"><i class='bx bx-link-external'></i></a>
+        </div>
+      </div>
+    }
+  </div>
+</section>

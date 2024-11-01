@@ -1,13 +1,16 @@
 /* ==================================== */
 /* ================HOME================ */
 /* ==================================== */
-
+section {
+    padding: 13rem 12% 1rem;
+}
 .home {
     display: flex;
     align-items: center;
+    flex-direction: row;
     justify-content: center;
-    
     gap: 15rem;
+    width: 100%;
 }
 
 .home-content {
@@ -18,8 +21,37 @@
     justify-self: center;
     margin-top: 3rem;
     
-    h3 {
+    padding: 32px;
+    
+    .open-to-work-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
         margin-bottom: 2rem;
+        
+        div {
+            margin-left: 12px;
+            width: 4px;
+            height: 4px;
+            background: forestgreen;
+            border-radius: 50%;
+            box-shadow: 0 0 15px 5px forestgreen
+        }
+        
+        img {
+            width: 48px;
+            height: 48px;
+            border-radius: 4px;
+        }
+        
+        p {
+            margin-left: 4px;
+            opacity: 0.2;
+        }
+    }
+    
+    h3 {
+        margin-bottom: 3rem;
         margin-top: 1rem;
         font-size: 3.5rem;
         
@@ -33,82 +65,25 @@
         
         span {
             color: var(--primary);
-            text-shadow: 0 0 25px var(--primary);
         }
     }
     
-    p{
-        font-size: 1.5rem;
-        font-weight: 500;
-        line-height: 1.8;
-        max-width: 1000px;
-    }
-    
-    .text-animation {
-        font-size: 34px;
-        font-weight: 600;
-        min-width: 280px;
-        
-        span {
-            position: relative;
-            
-            &::before {
-                content: "Développeur Web";
-                color: var(--primary);
-                animation: words 20s infinite;
-            }
-            
-            &::after {
-                content: "";
-                background-color: var(--background-color);
-                position: absolute;
-                width: calc(100% + 8px);
-                height: 100%;
-                border-left: 3px solid var(--background-color);
-                right: -8px;
-                animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
-            }
-        }
-    }
-    
-    .social-icons {
-        a {
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
-            width: 4.5rem;
-            height: 4.5rem;
-            background: transparent;
-            border: 2px solid var(--primary);
-            font-size: 2.5rem;
-            border-radius: 50%;
-            color: var(--primary);
-            margin: 3rem 1.5rem 3rem 0;
-            transition: 0.3s ease-in-out;
-            
-            &:hover{
-                color: var(--text-color);
-                transform: scale(1.3)translateY(-5px);
-                box-shadow: 0 0 25px var(--primary);
-                background-color: var(--primary);
-            }
-        }
-    }
 }
 
 .home-img {
-    border-radius: 50%;
-    animation: float 6s ease-in-out infinite;
+    border-radius: 32px;
+    //animation: float 6s ease-in-out infinite;
     
     img {
         position: relative;
         top: 3rem;
-        width: 32vw;
-        border-radius: 50%;
-        box-shadow: 0 0 25px var(--primary);
+        width: 20vw;
         cursor: pointer;
         transition: 0.4s ease-in-out;
         padding: 0;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        box-shadow: inset 0 -126px 252px -297px forestgreen
     }
 }
 
@@ -116,5 +91,43 @@
     display: flex;
     align-items: center;
     gap: 1.5rem;
+    margin-top: 3rem
 }
 
+.about-me-container {
+    margin-top: 10vh;
+    border-radius: 32px;
+    padding: 5rem;
+    background-color: rgba(39, 39, 42,0.50);
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    
+    
+}
+p{
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.8;
+    max-width: 1000px;
+}
+
+.color-top {
+    position: absolute;
+    height: 1000px;
+    width: 1000px;
+    background-image: radial-gradient(closest-side, rgba(255,255,255,0.1), var(--background-color));
+    top: -570px;
+    left: 50%;
+    z-index: -1;
+}
+
+.color-bottom {
+    position: absolute;
+    height: 1000px;
+    width: 1000px;
+    background-image: radial-gradient(closest-side, rgba(255,255,255,0.1), var(--background-color));
+    bottom: -1000px;
+    right: 50%;
+    z-index: -1;
+}

@@ -1,19 +1,15 @@
   <header class="header">
-    <a href="#home" class="logo">Margaux <span>Blanchet</span></a>
-    
-    <nav class="navbar">
-      <a href="#home" class="active">Home</a>
-      <a href="#experience">Mon parcours</a>
-      <a href="#hardSkills">Hard skills</a>
-      <a href="#softSkills">Soft skills</a>
-      <a href="#contact">Contact</a>
+    <nav class="navbar" #navBar>
+      <a href="#home" class="active" (click)="toggleNavigation('#home')" #home>Home</a>
+      <a href="#hardSkills" (click)="toggleNavigation('#hardSkills')" #hardSkills>Compétences</a>
+      <a href="#projects" (click)="toggleNavigation('#projects')" #projects>Projets</a>
+      <a href="#contact" (click)="toggleNavigation('#contact')" #contact>Contact</a>
     </nav>
   </header>
   
   <app-home></app-home>
-  <app-parcours></app-parcours>
   <app-hard-skills></app-hard-skills>
-  <app-soft-skills></app-soft-skills>
+  <app-projects></app-projects>
   <app-contacts></app-contacts>
   
   <footer class="footer">

@@ -6,16 +6,17 @@
 
 .header {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgba(0,0,0,0.3);
+    top: 16px;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: rgba(255,255,255,0.1);
     backdrop-filter: blur(10px);
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     z-index: 5;
-    padding: 32px;
+    padding: 16px 8px;
+    border-radius: 12px;
 }
 
 .logo {
@@ -34,20 +35,26 @@
 
 .navbar a {
     font-size: 1.8rem;
-    color: var(--text-color);
-    margin-left: 4rem;
+    color: var(--text-color-light);
+    margin-left: 1rem;
     font-weight: 500;
     transition: 0.3s ease;
-    border-bottom: 3px solid transparent;
-    
-    &:hover{
-        color: var(--primary);
-        border-bottom: 3px solid var(--primary);
-    }
-    
+    padding: 8px 16px;
+    border-radius: 8px;
     &:active {
-        color: var(--primary);
-        border-bottom: 3px solid var(--primary);
+        //border-bottom: 3px solid var(--text-color-light);
+        background-color: white;
+        color:var(--text-color-hover);
     }
+    &:hover{
+       // border-bottom: 3px solid var(--text-color-light);
+        background-color: white;
+        color:var(--text-color-hover);
+    }
+  
 }
 
+.active {
+    background-color: white;
+    color: var(--text-color-hover) !important;
+}

@@ -1,38 +1,68 @@
 <section class="skills" id="hardSkills">
-    <h2 class="heading" data-aos="fade-right">Hard skills</h2>
-    <p class="heading-sub" data-aos="fade-left">
-      Après l'obtention d'un Bac S option SVT en 2012, je me lance d'abord dans une année de Médecine, puis dans une licence de Chimie. C'est lors d'un cours d'informatique que je découvre le HTML et le CSS, et tout de suite je suis fascinée par tout ce qu'il est possible de faire avec juste un langage de balisage et de style. C'est ainsi que je commence à découvrir le joie du code.
-    </p>
-    
-    <div class="skills-container" data-aos="fade-up">
-      <div class="skill-box">
-        <div class="skill-info effect-3d-filled">
-          <h4>Langages</h4>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique aliquam consequatur, nisi minus sequi odio soluta reprehenderit iusto at nemo id maiores excepturi accusantium quos nesciunt laudantium cum dignissimos velit consequuntur? Adipisci deleniti dolore asperiores quasi, molestias doloribus? Amet voluptatibus error natus harum fugit voluptatum omnis nisi nam deleniti id?</p>
-        </div>
-      </div>
-      
-      <div class="skill-box" data-aos="fade-up">
-        <div class="skill-info effect-3d-filled">
-          <h4>Framework/CMS</h4>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique aliquam consequatur, nisi minus sequi odio soluta reprehenderit iusto at nemo id maiores excepturi accusantium quos nesciunt laudantium cum dignissimos velit consequuntur? Adipisci deleniti dolore asperiores quasi, molestias doloribus? Amet voluptatibus error natus harum fugit voluptatum omnis nisi nam deleniti id?</p>
-        </div>
-      </div>
-      
-      <div class="skill-box" data-aos="fade-up">
-        <div class="skill-info effect-3d-filled">
-          <h4>UX Design</h4>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique aliquam consequatur, nisi minus sequi odio soluta reprehenderit iusto at nemo id maiores excepturi accusantium quos nesciunt laudantium cum dignissimos velit consequuntur? Adipisci deleniti dolore asperiores quasi, molestias doloribus? Amet voluptatibus error natus harum fugit voluptatum omnis nisi nam deleniti id?</p>
-        </div>
-      </div>
-      
-      <div class="skill-box" data-aos="fade-up">
-        <div class="skill-info effect-3d-filled">
-          <h4>Outils</h4>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique aliquam consequatur, nisi minus sequi odio soluta reprehenderit iusto at nemo id maiores excepturi accusantium quos nesciunt laudantium cum dignissimos velit consequuntur? Adipisci deleniti dolore asperiores quasi, molestias doloribus? Amet voluptatibus error natus harum fugit voluptatum omnis nisi nam deleniti id?</p>
-        </div>
-      </div>
-    </div>
-    
-  </section>
+  <h2 class="heading" data-aos="fade-right">Compétences</h2>
+  <p class="heading-sub" data-aos="fade-left">
+    Passionnée par le code et toujours en veille technologique, je maîtrise les outils et langages essentiels pour concevoir et développer des applications performantes, intuitives et modernes. Mon objectif : créer des solutions web solides et sur mesure, de la conception à la mise en œuvre, pour répondre efficacement aux besoins numériques.
+  </p>
   
+  <h3>Langages</h3>
+  <div class="skills-container">
+    @for (langage of (langageSkills| async); track langage) {
+      <div class="skill-item" data-aos="fade-left">
+        <div class="img-container">
+        <img [src]="'../../../..//public/logos/' + langage.icon + '.png'">
+      </div>
+        <div class="skill-text">
+          <div class="skill-title">{{langage.title}}</div>
+          <div class="skill-description">{{langage.description}}</div>
+        </div>
+      </div>
+    }
+  </div>
+
+  <h3>frameworks</h3>
+  <div class="skills-container">
+    @for (framework of (frameworkSkills| async); track framework) {
+      <div class="skill-item" data-aos="fade-right">
+        <div class="img-container">
+        <img [src]="'../../../..//public/logos/' + framework.icon + '.png'">
+      </div>
+        <div class="skill-text">
+          <div class="skill-title">{{framework.title}}</div>
+          <div class="skill-description">{{framework.description}}</div>
+        </div>
+      </div>
+    }
+  </div>
+
+  <h3>UX/Design</h3>
+  <div class="skills-container">
+    @for (ux of (UXSkills| async); track ux) {
+      <div class="skill-item" data-aos="fade-left">
+        <div class="img-container">
+        <img [src]="'../../../..//public/logos/' + ux.icon + '.png'">
+      </div>
+        <div class="skill-text">
+          <div class="skill-title">{{ux.title}}</div>
+          <div class="skill-description">{{ux.description}}</div>
+        </div>
+      </div>
+    }
+  </div>
+
+  <h3>Outils</h3>
+  <div class="skills-container">
+    @for (tool of (toolSkills| async); track tool) {
+      <div class="skill-item" data-aos="fade-right">
+        <div class="img-container">
+        <img [src]="'../../../..//public/logos/' + tool.icon + '.png'">
+      </div>
+        <div class="skill-text">
+          <div class="skill-title">{{tool.title}}</div>
+          <div class="skill-description">{{tool.description}}</div>
+        </div>
+      </div>
+    }
+  </div>
+  <div class="color-top"></div>
+  <div class="color-bottom"></div>
+</section>
