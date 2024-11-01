@@ -2,7 +2,6 @@ import { Component, ElementRef, Input, OnInit, Renderer2, ViewChild, inject } fr
 import { Router, RouterOutlet } from '@angular/router';
 import AOS from "aos";
 import { HomeComponent } from "./sections/home/home.component";
-import { ParcoursComponent } from "./sections/parcours/parcours.component";
 import { ContactsComponent } from "./sections/contacts/contacts.component";
 import { HardSkillsComponent } from "./sections/hard-skills/hard-skills.component";
 import { ProjectsComponent } from "./sections/soft-skills/projects.component";
@@ -10,7 +9,7 @@ import { ProjectsComponent } from "./sections/soft-skills/projects.component";
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HomeComponent, ParcoursComponent, ContactsComponent, HardSkillsComponent, ProjectsComponent],
+  imports: [RouterOutlet, HomeComponent, ContactsComponent, HardSkillsComponent, ProjectsComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
