@@ -9,7 +9,7 @@
     @for (langage of (langageSkills| async); track langage) {
       <div class="skill-item" data-aos="fade-left">
         <div class="img-container">
-        <img [src]="'../../../assets/logos/' + langage.icon + '.png'">
+        <img [src]="'assets/logos/' + langage.icon + '.png'">
       </div>
         <div class="skill-text">
           <div class="skill-title">{{langage.title}}</div>
@@ -24,7 +24,7 @@
     @for (framework of (frameworkSkills| async); track framework) {
       <div class="skill-item" data-aos="fade-right">
         <div class="img-container">
-        <img [src]="'../../../assets/logos/' + framework.icon + '.png'">
+        <img [src]="'assets/logos/' + framework.icon + '.png'">
       </div>
         <div class="skill-text">
           <div class="skill-title">{{framework.title}}</div>
@@ -39,7 +39,7 @@
     @for (ux of (UXSkills| async); track ux) {
       <div class="skill-item" data-aos="fade-left">
         <div class="img-container">
-        <img [src]="'../../../assets/logos/' + ux.icon + '.png'">
+        <img [src]="'assets/logos/' + ux.icon + '.png'">
       </div>
         <div class="skill-text">
           <div class="skill-title">{{ux.title}}</div>
@@ -54,7 +54,7 @@
     @for (tool of (toolSkills| async); track tool) {
       <div class="skill-item" data-aos="fade-right">
         <div class="img-container">
-        <img [src]="'../../../assets/logos/' + tool.icon + '.png'">
+        <img [src]="'assets/logos/' + tool.icon + '.png'">
       </div>
         <div class="skill-text">
           <div class="skill-title">{{tool.title}}</div>
@@ -63,6 +63,6 @@
       </div>
     }
   </div>
-  <div class="color-top"></div>
-  <div class="color-bottom"></div>
+<!--  <div class="color-top"></div>-->
+<!--  <div class="color-bottom"></div>-->
 </section>

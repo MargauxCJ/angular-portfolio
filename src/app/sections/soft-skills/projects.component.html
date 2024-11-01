@@ -8,7 +8,7 @@
   <div class="grid-projects">
     @for (project of allProjects|async; track project) {
       <div class="project-container">
-        <div class="project-img" [style.background-image]="'url(../../../assets/projects/'+ project.img+ '.jpg)'"></div>
+        <div class="project-img" [style.background-image]="'url(assets/projects/'+ project.img+ '.jpg)'"></div>
         <div class="project-informations">
           <div class="project-text">
             <h3 class="project-title">{{project.title}}</h3>
