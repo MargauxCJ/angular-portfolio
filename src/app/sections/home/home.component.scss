@@ -13,6 +13,33 @@ section {
     width: 100%;
 }
 
+@media only screen and (max-width : 970px) {
+    /* Styles */
+    .home {
+        flex-wrap: wrap;
+    }
+
+    .home-content {
+        h1 {
+            font-size: 6em !important;
+            text-align: center;
+        }
+
+        h3 {
+            font-size: 3em !important;
+            text-align: center;
+        }
+       align-items: center !important;
+    }
+
+    .home-img {
+        img {
+            width: 100% !important;
+            margin-top: -18rem;
+        }
+    }
+    }
+
 .home-content {
     display: flex;
     flex-direction: column;

@@ -58,3 +58,10 @@
     background-color: white;
     color: var(--text-color-hover) !important;
 }
+
+
+@media only screen and (max-width : 970px) {
+    .header {
+        visibility: hidden;
+    }
+}

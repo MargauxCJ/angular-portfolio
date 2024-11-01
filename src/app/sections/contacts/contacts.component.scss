@@ -26,7 +26,7 @@ h3 {
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
-
+    
     a{color: white;}
     
     
@@ -46,4 +46,35 @@ h3 {
             font-size: 24px;
         }
     }
+}
+
+
+@media only screen and (max-width : 970px) {
+    section {
+        padding: 13rem 12% 1rem;
+    }
+    
+    h2 {
+        font-size: 3.5rem;
+    }
+    
+    a{width: 100%;}
+    
+    .infos-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+
+        
+        .infos-item {
+            width: 100%;
+            margin: 12px 0;
+            justify-content: center;
+        }
+    }
+    
 }

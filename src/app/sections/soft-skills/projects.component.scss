@@ -77,3 +77,22 @@ h3 {
         }
     }
 }
+
+
+@media only screen and (max-width : 970px) {
+    section {
+        padding: 13rem 12% 1rem;
+    }
+
+    h2 {
+        font-size: 3.5rem;
+    }
+
+    .grid-projects {
+        display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    }
+
+}
