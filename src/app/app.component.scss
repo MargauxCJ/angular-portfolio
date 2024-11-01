@@ -1,4 +1,4 @@
-@import '../assets/variables.scss'; 
+@import '../assets/variables.scss';
 
 /* ==================================== */
 /* ===============HEADER=============== */
@@ -25,12 +25,12 @@
     font-weight: 800;
     cursor: pointer;
     transition: 0.3s ease;
-    
+
     span {
         text-shadow: 0 0 25px var(--primary);
         color: var(--primary);
     }
-    
+
 }
 
 .navbar a {
@@ -51,7 +51,7 @@
         background-color: white;
         color:var(--text-color-hover);
     }
-  
+
 }
 
 .active {
@@ -60,7 +60,7 @@
 }
 
 
-@media only screen and (max-width : 970px) {
+@media (max-width : 970px) {
     .header {
         visibility: hidden;
     }

@@ -13,11 +13,18 @@ section {
     width: 100%;
 }
 
-@media only screen and (max-width : 970px) {
-    /* Styles */
+@media (max-width : 970px) {
+    section {
+        padding: 5rem 12% 1rem;
+    }
+
+    .btn-group {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
     .home {
         flex-wrap: wrap;
-        padding: 5rem 12% 1rem;
     }
 
     .home-content {

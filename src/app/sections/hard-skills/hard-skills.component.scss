@@ -56,9 +56,9 @@ h3 {
             }
 
         }
-        
+
     }
-    
+
 }
 
 .skill-info {
@@ -67,7 +67,7 @@ h3 {
         font-weight: 800;
         line-height: 2;
     }
-    
+
     p {
         font-size: 1.6rem;
         font-weight: 600;
@@ -97,7 +97,7 @@ h3 {
     z-index: -1;
 }
 
-@media only screen and (max-width : 970px) {
+@media (max-width : 970px) {
     section {
         padding: 13rem 12% 1rem;
     }
@@ -106,7 +106,7 @@ h3 {
         font-size: 3.5rem;
     }
 
-    
+
 .skills-container {
     display: flex;
     flex-direction: column;
