@@ -17,6 +17,7 @@ section {
     /* Styles */
     .home {
         flex-wrap: wrap;
+        padding: 5rem 12% 1rem;
     }
 
     .home-content {
@@ -47,15 +48,15 @@ section {
     text-align: left;
     justify-self: center;
     margin-top: 3rem;
-    
+
     padding: 32px;
-    
+
     .open-to-work-container {
         display: flex;
         flex-direction: row;
         align-items: center;
         margin-bottom: 2rem;
-        
+
         div {
             margin-left: 12px;
             width: 4px;
@@ -64,43 +65,43 @@ section {
             border-radius: 50%;
             box-shadow: 0 0 15px 5px forestgreen
         }
-        
+
         img {
             width: 48px;
             height: 48px;
             border-radius: 4px;
         }
-        
+
         p {
             margin-left: 4px;
             opacity: 0.2;
         }
     }
-    
+
     h3 {
         margin-bottom: 3rem;
         margin-top: 1rem;
         font-size: 3.5rem;
-        
+
     }
-    
+
     h1 {
         font-size: 7rem;
         font-weight: 700;
         margin-top: 1.5rem;
         line-height: 1;
-        
+
         span {
             color: var(--primary);
         }
     }
-    
+
 }
 
 .home-img {
     border-radius: 32px;
     //animation: float 6s ease-in-out infinite;
-    
+
     img {
         position: relative;
         top: 3rem;
@@ -129,8 +130,8 @@ section {
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
-    
-    
+
+
 }
 p{
     font-size: 1.5rem;
