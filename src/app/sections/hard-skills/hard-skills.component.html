@@ -4,28 +4,28 @@
     Passionnée par le code et toujours en veille technologique, je maîtrise les outils et langages essentiels pour concevoir et développer des applications performantes, intuitives et modernes. Mon objectif : créer des solutions web solides et sur mesure, de la conception à la mise en œuvre, pour répondre efficacement aux besoins numériques.
   </p>
 
-  <h3>Langages</h3>
-  <div class="skills-container">
-    @for (langage of (langageSkills| async); track langage) {
-      <div class="skill-item" data-aos="fade-left">
-        <div class="img-container">
-        <img [src]="'assets/logos/' + langage.icon + '.png'">
-      </div>
-        <div class="skill-text">
-          <div class="skill-title">{{langage.title}}</div>
-          <div class="skill-description">{{langage.description}}</div>
-        </div>
-      </div>
-    }
-  </div>
-
-  <h3>frameworks</h3>
+  <h3>frameworks & Librairies</h3>
   <div class="skills-container">
     @for (framework of (frameworkSkills| async); track framework) {
       <div class="skill-item" data-aos="fade-right">
         <div class="img-container">
         <img [src]="'assets/logos/' + framework.icon + '.png'">
       </div>
+        <div class="skill-text">
+          <div class="skill-title">{{framework.title}}</div>
+          <div class="skill-description">{{framework.description}}</div>
+        </div>
+      </div>
+    }
+  </div>
+
+  <h3>Testing</h3>
+  <div class="skills-container">
+    @for (framework of (testingSkills| async); track framework) {
+      <div class="skill-item" data-aos="fade-right">
+        <div class="img-container">
+          <img [src]="'assets/logos/' + framework.icon + '.png'">
+        </div>
         <div class="skill-text">
           <div class="skill-title">{{framework.title}}</div>
           <div class="skill-description">{{framework.description}}</div>

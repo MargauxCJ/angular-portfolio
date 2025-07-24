@@ -65,3 +65,15 @@
         visibility: hidden;
     }
 }
+
+
+.blurry-circle-1 {
+  border-radius: 5000px;
+  position: fixed;
+  right: -150px;
+  width: 1500px;
+  height: 1200px;
+  background-color: #f921ba;
+  filter: blur(200px);
+  opacity: 0.10;
+}

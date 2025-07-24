@@ -15,11 +15,13 @@ export class HardSkillsComponent {
   public toolSkills: Observable<HardSkill[]>;
   public langageSkills: Observable<HardSkill[]>;
   public frameworkSkills: Observable<HardSkill[]>;
+  public testingSkills: Observable<HardSkill[]>;
   public UXSkills: Observable<HardSkill[]>;
   constructor() {
     this.langageSkills = this.hardskills.pipe(map((hardskills) => hardskills.filter((hard) => hard.type === "langages")));
     this.toolSkills = this.hardskills.pipe(map((hardskills) => hardskills.filter((hard) => hard.type === "autres")))
     this.frameworkSkills = this.hardskills.pipe(map((hardskills) => hardskills.filter((hard) => hard.type === "framework")))
+    this.testingSkills = this.hardskills.pipe(map((hardskills) => hardskills.filter((hard) => hard.type === "testing")))
     this.UXSkills = this.hardskills.pipe(map((hardskills) => hardskills.filter((hard) => hard.type === "UX")))
   }
 }
