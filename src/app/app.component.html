@@ -1,19 +1,20 @@
-  <header class="header">
+  <header class="header-desktop">
     <nav class="navbar" #navBar>
-      <a href="#home" class="active" (click)="toggleNavigation('#home')" #home>Home</a>
-      <a href="#hardSkills" (click)="toggleNavigation('#hardSkills')" #hardSkills>Compétences</a>
-      <a href="#projects" (click)="toggleNavigation('#projects')" #projects>Projets</a>
-      <a href="#contact" (click)="toggleNavigation('#contact')" #contact>Contact</a>
+      <a [routerLink]="'home'" routerLinkActive="active">Home</a>
+      <a [routerLink]="'hardSkills'" routerLinkActive="active">Compétences</a>
+      <a [routerLink]="'projects'" routerLinkActive="active">Projets</a>
+      <a [routerLink]="'contacts'" routerLinkActive="active">Contacts</a>
     </nav>
   </header>
 
   <div class="blurry-circle-1"></div>
 
-  <app-home></app-home>
-  <app-hard-skills></app-hard-skills>
-  <app-projects></app-projects>
-  <app-contacts></app-contacts>
+  <mat-icon class="chevron-nav chevron-left-nav" (click)="changeSection('forward')">chevron_left</mat-icon>
+  <mat-icon class="chevron-nav chevron-right-nav" (click)="changeSection('back')">chevron_right</mat-icon>
 
-  <footer class="footer">
-    <div class="social"></div>
-  </footer>
+  <app-home class="mobile-section-visibility"></app-home>
+  <app-hard-skills class="mobile-section-visibility"></app-hard-skills>
+  <app-projects class="mobile-section-visibility"></app-projects>
+  <app-contacts class="mobile-section-visibility"></app-contacts>
+
+  <router-outlet></router-outlet>
