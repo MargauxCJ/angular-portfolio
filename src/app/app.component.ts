@@ -1,4 +1,4 @@
-import { Component, ElementRef, Input, OnInit, Renderer2, ViewChild, inject } from '@angular/core';
+import {Component, ElementRef, Input, OnInit, Renderer2, ViewChild, inject, HostListener} from '@angular/core';
 import {Router, RouterLink, RouterLinkActive, RouterOutlet} from '@angular/router';
 import AOS from "aos";
 import { HomeComponent } from "./sections/home/home.component";
@@ -16,14 +16,22 @@ import {MatIcon} from '@angular/material/icon';
 })
 export class AppComponent implements OnInit{
   @ViewChild('navBar', { static: false}) public navBar!: ElementRef;
-  public activeNav: string = '';
+  public isMobile = false;
   public indexSection = 0;
   public linkSections = ['home','hardSkills','projects','contacts'];
 
+  @HostListener('window:resize', ['$event'])
+  onResize(event: UIEvent) {
+    this.checkScreenSize();
+  }
   constructor(private router: Router, private el: ElementRef, private renderer: Renderer2) {}
 
   public ngOnInit(): void {
     AOS.init();
+    this.checkScreenSize();
+  }
+  public checkScreenSize() {
+    this.isMobile = window.innerWidth < 768;
   }
 
   public changeSection(direction: 'back'|'forward') {

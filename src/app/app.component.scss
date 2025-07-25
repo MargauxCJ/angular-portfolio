@@ -72,8 +72,9 @@
 
 
 @media (max-width: 970px) {
-  .header-desktop, .chevron-nav{
+  .header-desktop, .chevron-nav, mobile-router-visibility{
     display: none;
+    visibility: hidden;
   }
   .mobile-section-visibility {
     display: block;

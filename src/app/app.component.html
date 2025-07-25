@@ -17,4 +17,7 @@
   <app-projects class="mobile-section-visibility"></app-projects>
   <app-contacts class="mobile-section-visibility"></app-contacts>
 
-  <router-outlet></router-outlet>
+  @if (!isMobile) {
+    <router-outlet></router-outlet>
+  }
+
